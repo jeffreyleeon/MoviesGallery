@@ -36,5 +36,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MovieDBApiKey</key>
+	<string>327b8d0c66c74e5eab2ebbec7b6ba4ce</string>
 </dict>
 </plist>

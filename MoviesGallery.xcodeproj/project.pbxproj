@@ -605,6 +605,11 @@
 			baseConfigurationReference = 4DE3BBFA0B582D88803327CF /* Pods-MoviesGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOVIE_DB_API_KEY=327b8d0c66c74e5eab2ebbec7b6ba4ce",
+				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
@@ -618,6 +623,11 @@
 			baseConfigurationReference = 80847BABB16E72FD61D484C9 /* Pods-MoviesGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOVIE_DB_API_KEY=327b8d0c66c74e5eab2ebbec7b6ba4ce",
+				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";

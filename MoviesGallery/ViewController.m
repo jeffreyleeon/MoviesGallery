@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    CGRect frame = CGRectMake(0, 0, 200, 500); // Replacing with your dimensions
+    UIView* v = [[UIView alloc] initWithFrame: frame];
+    [v setBackgroundColor: [UIColor redColor]];
+    [self.view addSubview: v];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,5 +20,7 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>MovieDBApiKey</key>
+	<string>327b8d0c66c74e5eab2ebbec7b6ba4ce</string>
 </dict>
 </plist>
