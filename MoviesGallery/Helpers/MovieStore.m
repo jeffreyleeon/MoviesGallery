@@ -4,6 +4,7 @@
 @implementation MovieStore
 
 #define MOVIE_DB_API_KEY @"327b8d0c66c74e5eab2ebbec7b6ba4ce"
+#define RESULT_KEY @"results"
 
 #pragma mark Singleton Methods
 
@@ -33,8 +34,8 @@
     };
     [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTopRated parameters:params block:^(id responseObject, NSError *error) {
         if (!error) {
-//            NSLog(@"%@", responseObject);
-            callback(responseObject);
+            NSArray* moviesArray = [responseObject objectForKey: RESULT_KEY];
+            callback(moviesArray);
         }
     }];
 }
