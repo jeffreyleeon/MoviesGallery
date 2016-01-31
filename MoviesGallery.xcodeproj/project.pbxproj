@@ -626,7 +626,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"MOVIE_DB_API_KEY=327b8d0c66c74e5eab2ebbec7b6ba4ce",
 				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -644,7 +643,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"MOVIE_DB_API_KEY=327b8d0c66c74e5eab2ebbec7b6ba4ce",
 				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
