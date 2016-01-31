@@ -7,11 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SwipeView/SwipeView.h>
 #import "Helpers/MovieStore.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <
+    SwipeViewDataSource,
+    SwipeViewDelegate
+>
 
 @property (assign) MovieStore* movieStore;
+@property (strong) NSArray* topMovies;
+
+@property (strong, nonatomic) IBOutlet SwipeView* swipeView;
+
+// SwipeView delegates
+- (NSInteger)numberOfItemsInSwipeView:(SwipeView *) swipeView;
+- (UIView *)swipeView:(SwipeView *) swipeView viewForItemAtIndex:(NSInteger) index reusingView:(UIView *) view;
+- (CGSize)swipeViewItemSize:(SwipeView *) swipeView;
 
 @end
 
