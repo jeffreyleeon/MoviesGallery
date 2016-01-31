@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Helpers/MovieStore.h"
 
 @interface ViewController : UIViewController
 
+@property (assign) MovieStore* movieStore;
 
 @end
 

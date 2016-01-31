@@ -21,11 +21,21 @@
     UIView* v = [[UIView alloc] initWithFrame: frame];
     [v setBackgroundColor: [UIColor redColor]];
     [self.view addSubview: v];
+    
+    _movieStore = [MovieStore sharedInstance];
+    
+    [self fetchTopMovies];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) fetchTopMovies {
+    [_movieStore fetchTopMoviesWithCallback: ^(id responseObject) {
+        NSLog(@"%@", responseObject);
+    }];
 }
 
 @end
