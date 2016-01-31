@@ -23,6 +23,9 @@
 		FC9277C81C5D171C00F3D640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9277C61C5D171C00F3D640 /* LaunchScreen.storyboard */; };
 		FC9277D31C5D171C00F3D640 /* MoviesGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277D21C5D171C00F3D640 /* MoviesGalleryTests.m */; };
 		FC9277DE1C5D171C00F3D640 /* MoviesGalleryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277DD1C5D171C00F3D640 /* MoviesGalleryUITests.m */; };
+		FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
+		FCB5B3B81C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
+		FCB5B3B91C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,8 @@
 		FC9277D91C5D171C00F3D640 /* MoviesGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9277DD1C5D171C00F3D640 /* MoviesGalleryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGalleryUITests.m; sourceTree = "<group>"; };
 		FC9277DF1C5D171C00F3D640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB5B3B51C5DA7C600342CC7 /* MovieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieStore.h; path = Helpers/MovieStore.h; sourceTree = "<group>"; };
+		FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieStore.m; path = Helpers/MovieStore.m; sourceTree = "<group>"; };
 		FD609DC328D2981470A2ABF2 /* Pods-MoviesGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesGalleryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesGalleryUITests/Pods-MoviesGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +166,7 @@
 		FC9277B41C5D171C00F3D640 /* MoviesGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FCB5B3B41C5DA78500342CC7 /* Helpers */,
 				FC9277B81C5D171C00F3D640 /* AppDelegate.h */,
 				FC9277B91C5D171C00F3D640 /* AppDelegate.m */,
 				FC9277BB1C5D171C00F3D640 /* ViewController.h */,
@@ -199,6 +205,15 @@
 				FC9277DF1C5D171C00F3D640 /* Info.plist */,
 			);
 			path = MoviesGalleryUITests;
+			sourceTree = "<group>";
+		};
+		FCB5B3B41C5DA78500342CC7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FCB5B3B51C5DA7C600342CC7 /* MovieStore.h */,
+				FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC9277BD1C5D171C00F3D640 /* ViewController.m in Sources */,
 				FC9277C31C5D171C00F3D640 /* MoviesGallery.xcdatamodeld in Sources */,
 				FC9277BA1C5D171C00F3D640 /* AppDelegate.m in Sources */,
@@ -473,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB5B3B81C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC9277D31C5D171C00F3D640 /* MoviesGalleryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB5B3B91C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC9277DE1C5D171C00F3D640 /* MoviesGalleryUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
