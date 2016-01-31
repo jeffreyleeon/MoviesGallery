@@ -14,6 +14,7 @@
 		FC55E00D1C5D1CFD000305CE /* libPods-MoviesGallery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E0081C5D1CFD000305CE /* libPods-MoviesGallery.a */; };
 		FC55E00E1C5D1CFD000305CE /* libPods-MoviesGalleryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E0091C5D1CFD000305CE /* libPods-MoviesGalleryTests.a */; };
 		FC55E00F1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E00A1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a */; };
+		FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FC880F7D1C5E1C8D00E48704 /* Movie.m */; };
 		FC9277B71C5D171C00F3D640 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B61C5D171C00F3D640 /* main.m */; };
 		FC9277BA1C5D171C00F3D640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B91C5D171C00F3D640 /* AppDelegate.m */; };
 		FC9277BD1C5D171C00F3D640 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277BC1C5D171C00F3D640 /* ViewController.m */; };
@@ -59,6 +60,8 @@
 		FC55E0081C5D1CFD000305CE /* libPods-MoviesGallery.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGallery.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGallery.a"; sourceTree = "<group>"; };
 		FC55E0091C5D1CFD000305CE /* libPods-MoviesGalleryTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGalleryTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGalleryTests.a"; sourceTree = "<group>"; };
 		FC55E00A1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGalleryUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGalleryUITests.a"; sourceTree = "<group>"; };
+		FC880F7C1C5E1C8D00E48704 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Models/Movie.h; sourceTree = "<group>"; };
+		FC880F7D1C5E1C8D00E48704 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Models/Movie.m; sourceTree = "<group>"; };
 		FC9277B21C5D171C00F3D640 /* MoviesGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9277B61C5D171C00F3D640 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC9277B81C5D171C00F3D640 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +144,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC880F7B1C5E1B2E00E48704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC880F7C1C5E1C8D00E48704 /* Movie.h */,
+				FC880F7D1C5E1C8D00E48704 /* Movie.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		FC9277A91C5D171C00F3D640 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +178,7 @@
 		FC9277B41C5D171C00F3D640 /* MoviesGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FC880F7B1C5E1B2E00E48704 /* Models */,
 				FCB5B3B41C5DA78500342CC7 /* Helpers */,
 				FC9277B81C5D171C00F3D640 /* AppDelegate.h */,
 				FC9277B91C5D171C00F3D640 /* AppDelegate.m */,
@@ -477,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */,
 				FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC9277BD1C5D171C00F3D640 /* ViewController.m in Sources */,
 				FC9277C31C5D171C00F3D640 /* MoviesGallery.xcdatamodeld in Sources */,

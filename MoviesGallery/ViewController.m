@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Models/Movie.h"
 
 @interface ViewController ()
 
@@ -33,8 +34,7 @@
 }
 
 - (void) fetchTopMovies {
-    [_movieStore fetchTopMoviesWithCallback: ^(id responseObject) {
-        NSLog(@"%@", responseObject);
+    [_movieStore fetchTopMoviesWithCallback: ^(NSMutableArray* movies) {
     }];
 }
 
