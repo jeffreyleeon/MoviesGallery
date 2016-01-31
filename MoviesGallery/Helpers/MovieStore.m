@@ -1,5 +1,6 @@
 #import "MovieStore.H"
 #import <ILMovieDBClient.h>
+#import "../Models/Movie.h"
 
 @implementation MovieStore
 
@@ -34,10 +35,20 @@
     };
     [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTopRated parameters:params block:^(id responseObject, NSError *error) {
         if (!error) {
-            NSArray* moviesArray = [responseObject objectForKey: RESULT_KEY];
-            callback(moviesArray);
+            NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+            NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
+            callback(movies);
         }
     }];
+}
+
+- (NSMutableArray*)adaptMovies:(NSArray*) movieJsonsArray {
+    NSMutableArray* movieObjectsArray = [[NSMutableArray alloc] init];
+    [movieJsonsArray enumerateObjectsUsingBlock:^(id movieJson, NSUInteger idx, BOOL *stop) {
+        Movie* movie = [[Movie alloc] initWithDictionary: movieJson];
+        [movieObjectsArray addObject: movie];
+    }];
+    return movieObjectsArray;
 }
 
 @end
