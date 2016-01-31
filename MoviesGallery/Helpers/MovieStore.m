@@ -26,14 +26,15 @@
 - (void)dealloc {
 }
 
-- (void)fetchTopMovies {
+- (void)fetchTopMoviesWithCallback:(void(^)(id))callback {
     NSDictionary *params = @{
         @"page": @"1",
         @"language": @"en"
     };
     [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTopRated parameters:params block:^(id responseObject, NSError *error) {
         if (!error) {
-            NSLog(@"%@", responseObject);
+//            NSLog(@"%@", responseObject);
+            callback(responseObject);
         }
     }];
 }

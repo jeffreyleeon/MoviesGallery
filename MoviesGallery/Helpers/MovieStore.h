@@ -4,6 +4,6 @@
 
 +(id) sharedInstance;
 
--(void) fetchTopMovies;
+-(void) fetchTopMoviesWithCallback:(void(^)(id))callback;
 
 @end

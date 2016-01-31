@@ -33,7 +33,9 @@
 }
 
 - (void) fetchTopMovies {
-    [_movieStore fetchTopMovies];
+    [_movieStore fetchTopMoviesWithCallback: ^(id responseObject) {
+        NSLog(@"%@", responseObject);
+    }];
 }
 
 @end
