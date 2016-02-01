@@ -22,7 +22,10 @@
     [_swipeView setScrollEnabled: YES];
     
     _movieStore = [MovieStore sharedInstance];
+    
     [self fetchTopMovies];
+    
+    [self scheduleAutoScrolling];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +52,14 @@
     UITextField* textField = [[UITextField alloc] initWithFrame: rect];
     [textField setText: movieName];
     [textField setTextColor: [UIColor whiteColor]];
-    [_view addSubview: textField];
+//    [_view addSubview: textField];
+    
+    CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, _swipeView.frame.size.height);
+    UIImage* img = [UIImage imageWithData: [movie getPosterImageData]];
+    UIImageView* imageView = [[UIImageView alloc] initWithFrame: imageViewFrame];
+    [imageView setImage: img];
+    [imageView setContentMode: UIViewContentModeScaleAspectFit];
+    [_view addSubview: imageView];
     
     return _view;
 }
@@ -63,6 +73,24 @@
         _topMovies = [[NSArray alloc] initWithArray: movies];
         [_swipeView reloadData];
     }];
+}
+
+- (void) scheduleAutoScrolling {
+    [NSTimer scheduledTimerWithTimeInterval: 5.0
+                                     target: self
+                                   selector: @selector(nextTopMovie)
+                                   userInfo: NULL
+                                    repeats: YES];
+}
+
+- (void) nextTopMovie {
+    // First page is at index 0
+    NSInteger currentPage = [_swipeView currentPage];
+    NSInteger nextPage = currentPage + 1;
+    if (nextPage == [_topMovies count]) {
+        nextPage = 0;
+    }
+    [_swipeView scrollToPage: nextPage duration: 0.5];
 }
 
 @end
