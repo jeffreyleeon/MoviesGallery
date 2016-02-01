@@ -42,6 +42,20 @@
     }];
 }
 
+-(void) fetchPopularMoviesWithCallback:(void(^)(id))callback {
+    NSDictionary *params = @{
+                             @"page": @"1",
+                             @"language": @"en"
+                             };
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBMoviePopular parameters:params block:^(id responseObject, NSError *error) {
+        if (!error) {
+            NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+            NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
+            callback(movies);
+        }
+    }];
+}
+
 - (NSMutableArray*)adaptMovies:(NSArray*) movieJsonsArray {
     NSMutableArray* movieObjectsArray = [[NSMutableArray alloc] init];
     [movieJsonsArray enumerateObjectsUsingBlock:^(id movieJson, NSUInteger idx, BOOL *stop) {

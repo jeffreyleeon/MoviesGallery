@@ -16,7 +16,7 @@
 >
 
 @property (assign) MovieStore* movieStore;
-@property (strong) NSArray* topMovies;
+@property (strong) NSArray* popularMovies;
 
 @property (strong, nonatomic) IBOutlet SwipeView* swipeView;
 

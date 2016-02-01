@@ -23,7 +23,7 @@
     
     _movieStore = [MovieStore sharedInstance];
     
-    [self fetchTopMovies];
+    [self fetchPopularMovies];
     
     [self scheduleAutoScrolling];
 }
@@ -34,11 +34,11 @@
 }
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *) swipeView {
-    return [_topMovies count];
+    return [_popularMovies count];
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
-    Movie* movie = [_topMovies objectAtIndex: index];
+    Movie* movie = [_popularMovies objectAtIndex: index];
     return [self viewOfSwipeViewForMovie: movie];
 }
 
@@ -68,9 +68,9 @@
     return _swipeView.bounds.size;
 }
 
-- (void) fetchTopMovies {
-    [_movieStore fetchTopMoviesWithCallback: ^(NSMutableArray* movies) {
-        _topMovies = [[NSArray alloc] initWithArray: movies];
+- (void) fetchPopularMovies {
+    [_movieStore fetchPopularMoviesWithCallback: ^(NSMutableArray* movies) {
+        _popularMovies = [[NSArray alloc] initWithArray: movies];
         [_swipeView reloadData];
     }];
 }
@@ -87,7 +87,7 @@
     // First page is at index 0
     NSInteger currentPage = [_swipeView currentPage];
     NSInteger nextPage = currentPage + 1;
-    if (nextPage == [_topMovies count]) {
+    if (nextPage == [_popularMovies count]) {
         nextPage = 0;
     }
     [_swipeView scrollToPage: nextPage duration: 0.5];
