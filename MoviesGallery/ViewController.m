@@ -43,16 +43,8 @@
 }
 
 - (UIView*)viewOfSwipeViewForMovie:(Movie*) movie {
-    NSString* movieName = [movie getTitle];
-    
     UIView* _view = [[UIView alloc] init];
     [_view setBackgroundColor: [UIColor blackColor]];
-    
-    CGRect rect = CGRectMake(0, 20, 200, 50);
-    UITextField* textField = [[UITextField alloc] initWithFrame: rect];
-    [textField setText: movieName];
-    [textField setTextColor: [UIColor whiteColor]];
-//    [_view addSubview: textField];
     
     CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, _swipeView.frame.size.height);
     UIImage* img = [UIImage imageWithData: [movie getPosterImageData]];
@@ -76,14 +68,14 @@
 }
 
 - (void) scheduleAutoScrolling {
-    [NSTimer scheduledTimerWithTimeInterval: 5.0
+    [NSTimer scheduledTimerWithTimeInterval: 10.0
                                      target: self
-                                   selector: @selector(nextTopMovie)
+                                   selector: @selector(nextPopularMovie)
                                    userInfo: NULL
                                     repeats: YES];
 }
 
-- (void) nextTopMovie {
+- (void) nextPopularMovie {
     // First page is at index 0
     NSInteger currentPage = [_swipeView currentPage];
     NSInteger nextPage = currentPage + 1;
