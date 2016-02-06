@@ -304,6 +304,7 @@
 				TargetAttributes = {
 					FC9277B11C5D171C00F3D640 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E73MP5SE23;
 					};
 					FC9277CD1C5D171C00F3D640 = {
 						CreatedOnToolsVersion = 7.2;
@@ -637,6 +638,8 @@
 			baseConfigurationReference = 4DE3BBFA0B582D88803327CF /* Pods-MoviesGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -646,6 +649,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.MoviesGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -654,6 +658,8 @@
 			baseConfigurationReference = 80847BABB16E72FD61D484C9 /* Pods-MoviesGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -663,6 +669,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.MoviesGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
