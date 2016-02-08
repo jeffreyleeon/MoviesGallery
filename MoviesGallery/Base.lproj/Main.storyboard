@@ -69,7 +69,7 @@
         <scene sceneID="xl5-IY-Oou">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOj-wS-ljR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Movies" id="zaA-4Z-vJW"/>
+                    <tabBarItem key="tabBarItem" title="Top Movies" image="top-movies-icon" selectedImage="top-movies-icon" id="zaA-4Z-vJW"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="22M-rh-PXU">
@@ -115,7 +115,7 @@
         <scene sceneID="PKB-bc-dES">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nq3-mD-WO2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Current / Coming Soon" id="tqu-DP-5ij"/>
+                    <tabBarItem key="tabBarItem" title="Current / Coming Soon" image="film-wheel" selectedImage="film-wheel" id="tqu-DP-5ij"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qg-dc-5dJ">
@@ -132,4 +132,8 @@
             <point key="canvasLocation" x="930" y="171"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="film-wheel" width="30" height="30"/>
+        <image name="top-movies-icon" width="30" height="30"/>
+    </resources>
 </document>
