@@ -46,12 +46,24 @@
     UIView* _view = [[UIView alloc] init];
     [_view setBackgroundColor: [UIColor blackColor]];
     
-    CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, _swipeView.frame.size.height);
+    CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, 400);
     UIImage* img = [UIImage imageWithData: [movie getPosterImageData]];
     UIImageView* imageView = [[UIImageView alloc] initWithFrame: imageViewFrame];
     [imageView setImage: img];
     [imageView setContentMode: UIViewContentModeScaleAspectFit];
     [_view addSubview: imageView];
+    
+    float margin = 40;
+    CGRect overviewLabelFrame = CGRectMake(margin, imageViewFrame.size.height - margin,
+                                        _swipeView.frame.size.width - 2 * margin, 300);
+    UILabel* overviewLabel = [[UILabel alloc] initWithFrame: overviewLabelFrame];
+    [overviewLabel setTextAlignment: NSTextAlignmentCenter];
+    [overviewLabel setTextColor: [UIColor whiteColor]];
+    [overviewLabel setNumberOfLines: 7];
+    [overviewLabel setClipsToBounds: YES];
+    [overviewLabel setFont: [UIFont systemFontOfSize: 17]];
+    [overviewLabel setText: [movie getOverview]];
+    [_view addSubview: overviewLabel];
     
     return _view;
 }

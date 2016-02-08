@@ -49,6 +49,10 @@
     return _title;
 }
 
+- (NSString*) getOverview {
+    return _overview;
+}
+
 - (NSData*) getPosterImageData {
     NSURL* url = [NSURL URLWithString: _posterImagePath];
     NSData* imageData = [NSData dataWithContentsOfURL: url];

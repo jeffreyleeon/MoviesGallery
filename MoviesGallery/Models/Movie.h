@@ -27,6 +27,7 @@
 - (id)initWithDictionary:(NSDictionary *) dictionary;
 - (NSInteger) getMovieId;
 - (NSString*) getTitle;
+- (NSString*) getOverview;
 - (NSData*) getPosterImageData;
 
 @end

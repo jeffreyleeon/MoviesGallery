@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-L7-NDC" customClass="SwipeView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="gEn-HW-oCz"/>
@@ -28,7 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t4a-L7-NDC" secondAttribute="bottom" constant="231" id="5kN-o9-cZW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t4a-L7-NDC" secondAttribute="bottom" id="5kN-o9-cZW"/>
                             <constraint firstItem="t4a-L7-NDC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7EG-hH-txv"/>
                             <constraint firstAttribute="trailing" secondItem="t4a-L7-NDC" secondAttribute="trailing" id="Eza-04-TaN"/>
                             <constraint firstItem="t4a-L7-NDC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nqb-Jl-uCJ"/>
