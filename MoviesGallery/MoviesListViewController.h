@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Helpers/MovieStore.h"
 
 @interface MoviesListViewController : UIViewController
+
+@property (assign) MovieStore* movieStore;
+@property (strong) NSArray* currentMovies;
+@property (strong) NSArray* comingSoonMovies;
 
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 

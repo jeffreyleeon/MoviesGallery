@@ -56,6 +56,34 @@
     }];
 }
 
+-(void) fetchCurrentMoviesWithCallback:(void(^)(id))callback {
+    NSDictionary *params = @{
+                             @"page": @"1",
+                             @"language": @"en"
+                             };
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTheatres parameters:params block:^(id responseObject, NSError *error) {
+        if (!error) {
+            NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+            NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
+            callback(movies);
+        }
+    }];
+}
+
+-(void) fetchComingSoonMoviesWithCallback:(void(^)(id))callback {
+    NSDictionary *params = @{
+                             @"page": @"1",
+                             @"language": @"en"
+                             };
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieUpcoming parameters:params block:^(id responseObject, NSError *error) {
+        if (!error) {
+            NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+            NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
+            callback(movies);
+        }
+    }];
+}
+
 - (NSMutableArray*)adaptMovies:(NSArray*) movieJsonsArray {
     NSMutableArray* movieObjectsArray = [[NSMutableArray alloc] init];
     [movieJsonsArray enumerateObjectsUsingBlock:^(id movieJson, NSUInteger idx, BOOL *stop) {

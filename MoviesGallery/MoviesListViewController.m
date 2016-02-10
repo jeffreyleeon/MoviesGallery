@@ -16,7 +16,12 @@
 @implementation MoviesListViewController
 
 - (void)viewDidLoad {
-    [self.tableView setBackgroundColor: [UIColor blackColor]];
+    [_tableView setBackgroundColor: [UIColor blackColor]];
+    [_tableView setBounces: FALSE];
+    
+    _movieStore = [MovieStore sharedInstance];
+    [self fetchCurrentMovies];
+    [self fetchComingSoonMovies];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,6 +32,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) fetchCurrentMovies {
+    [_movieStore fetchPopularMoviesWithCallback: ^(NSMutableArray* movies) {
+        _currentMovies = [[NSArray alloc] initWithArray: movies];
+        [_tableView reloadData];
+    }];
+}
+
+- (void) fetchComingSoonMovies {
+    [_movieStore fetchPopularMoviesWithCallback: ^(NSMutableArray* movies) {
+        _comingSoonMovies = [[NSArray alloc] initWithArray: movies];
+        [_tableView reloadData];
+    }];
+}
+
+// TableView delegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -58,7 +78,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    NSInteger ret = 0;
+    if (section == 0) {
+        ret = [_currentMovies count];
+    } else if (section == 1) {
+        ret = [_comingSoonMovies count];
+    }
+    return ret;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
