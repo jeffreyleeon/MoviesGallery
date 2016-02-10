@@ -87,6 +87,7 @@
 - (NSMutableArray*)adaptMovies:(NSArray*) movieJsonsArray {
     NSMutableArray* movieObjectsArray = [[NSMutableArray alloc] init];
     [movieJsonsArray enumerateObjectsUsingBlock:^(id movieJson, NSUInteger idx, BOOL *stop) {
+        NSLog(@"====%@", movieJson);
         Movie* movie = [[Movie alloc] initWithDictionary: movieJson];
         [movieObjectsArray addObject: movie];
     }];

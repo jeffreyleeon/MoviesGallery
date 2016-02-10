@@ -33,14 +33,14 @@
 }
 
 - (void) fetchCurrentMovies {
-    [_movieStore fetchPopularMoviesWithCallback: ^(NSMutableArray* movies) {
+    [_movieStore fetchCurrentMoviesWithCallback: ^(NSMutableArray* movies) {
         _currentMovies = [[NSArray alloc] initWithArray: movies];
         [_tableView reloadData];
     }];
 }
 
 - (void) fetchComingSoonMovies {
-    [_movieStore fetchPopularMoviesWithCallback: ^(NSMutableArray* movies) {
+    [_movieStore fetchComingSoonMoviesWithCallback: ^(NSMutableArray* movies) {
         _comingSoonMovies = [[NSArray alloc] initWithArray: movies];
         [_tableView reloadData];
     }];
@@ -79,9 +79,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger ret = 0;
-    if (section == 0) {
+    if (section == 0 && _currentMovies) {
         ret = [_currentMovies count];
-    } else if (section == 1) {
+    } else if (section == 1 && _comingSoonMovies) {
         ret = [_comingSoonMovies count];
     }
     return ret;
@@ -97,6 +97,8 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
+    
+    [cell.popularity setText: @"★"];
     
     return cell;
 }

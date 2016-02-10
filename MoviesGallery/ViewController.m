@@ -59,7 +59,7 @@
     UILabel* overviewLabel = [[UILabel alloc] initWithFrame: overviewLabelFrame];
     [overviewLabel setTextAlignment: NSTextAlignmentCenter];
     [overviewLabel setTextColor: [UIColor whiteColor]];
-    [overviewLabel setNumberOfLines: 7];
+    [overviewLabel setNumberOfLines: 4];
     [overviewLabel setClipsToBounds: YES];
     [overviewLabel setFont: [UIFont systemFontOfSize: 17]];
     [overviewLabel setText: [movie getOverview]];

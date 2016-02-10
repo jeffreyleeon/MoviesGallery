@@ -33,7 +33,9 @@
         _voteAverage = [[dictionary objectForKey: VOTE_AVERAGE_KEY] doubleValue];
         _title = [dictionary objectForKey: TITLE_KEY];
         _overview = [dictionary objectForKey: OVERVIEW_KEY];
-        if ([dictionary objectForKey: POSTER_PATH_KEY]) {
+        NSString* posterPath = [dictionary objectForKey: POSTER_PATH_KEY];
+        if (posterPath &&
+            ![posterPath isKindOfClass:[NSNull class]]) {
             _posterImagePath = [IMAGE_BASE_PATH stringByAppendingString: [dictionary objectForKey: POSTER_PATH_KEY]];
         }
         _language = [dictionary objectForKey: LANGUAGE_KEY];
