@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="1452" y="-724"/>
         </scene>
-        <!--View Controller-->
+        <!--Current / Coming Soon-->
         <scene sceneID="ZUS-Ut-Y99">
             <objects>
                 <viewController id="Zmd-kV-wjN" sceneMemberID="viewController">
@@ -58,12 +58,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j5m-Vw-CMU"/>
+                    <navigationItem key="navigationItem" title="Current / Coming Soon" id="j5m-Vw-CMU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kft-ca-mxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="171"/>
+            <point key="canvasLocation" x="1460" y="171"/>
         </scene>
         <!--Top Movies-->
         <scene sceneID="xl5-IY-Oou">
@@ -121,6 +121,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qg-dc-5dJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
