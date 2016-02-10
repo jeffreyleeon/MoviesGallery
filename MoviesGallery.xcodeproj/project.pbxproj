@@ -14,6 +14,8 @@
 		FC55E00D1C5D1CFD000305CE /* libPods-MoviesGallery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E0081C5D1CFD000305CE /* libPods-MoviesGallery.a */; };
 		FC55E00E1C5D1CFD000305CE /* libPods-MoviesGalleryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E0091C5D1CFD000305CE /* libPods-MoviesGalleryTests.a */; };
 		FC55E00F1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC55E00A1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a */; };
+		FC848BDB1C6B860800343BB5 /* MoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */; };
+		FC848BDE1C6B8AC700343BB5 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */; };
 		FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FC880F7D1C5E1C8D00E48704 /* Movie.m */; };
 		FC9277B71C5D171C00F3D640 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B61C5D171C00F3D640 /* main.m */; };
 		FC9277BA1C5D171C00F3D640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B91C5D171C00F3D640 /* AppDelegate.m */; };
@@ -60,6 +62,10 @@
 		FC55E0081C5D1CFD000305CE /* libPods-MoviesGallery.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGallery.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGallery.a"; sourceTree = "<group>"; };
 		FC55E0091C5D1CFD000305CE /* libPods-MoviesGalleryTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGalleryTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGalleryTests.a"; sourceTree = "<group>"; };
 		FC55E00A1C5D1CFD000305CE /* libPods-MoviesGalleryUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MoviesGalleryUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MoviesGalleryUITests.a"; sourceTree = "<group>"; };
+		FC848BD91C6B860800343BB5 /* MoviesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesListViewController.h; sourceTree = "<group>"; };
+		FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListViewController.m; sourceTree = "<group>"; };
+		FC848BDC1C6B8AC700343BB5 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		FC880F7C1C5E1C8D00E48704 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Models/Movie.h; sourceTree = "<group>"; };
 		FC880F7D1C5E1C8D00E48704 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Models/Movie.m; sourceTree = "<group>"; };
 		FC9277B21C5D171C00F3D640 /* MoviesGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +190,10 @@
 				FC9277B91C5D171C00F3D640 /* AppDelegate.m */,
 				FC9277BB1C5D171C00F3D640 /* ViewController.h */,
 				FC9277BC1C5D171C00F3D640 /* ViewController.m */,
+				FC848BD91C6B860800343BB5 /* MoviesListViewController.h */,
+				FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */,
+				FC848BDC1C6B8AC700343BB5 /* MovieTableViewCell.h */,
+				FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */,
 				FC9277BE1C5D171C00F3D640 /* Main.storyboard */,
 				FC9277C41C5D171C00F3D640 /* Assets.xcassets */,
 				FC9277C61C5D171C00F3D640 /* LaunchScreen.storyboard */,
@@ -493,6 +503,8 @@
 			files = (
 				FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */,
 				FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */,
+				FC848BDE1C6B8AC700343BB5 /* MovieTableViewCell.m in Sources */,
+				FC848BDB1C6B860800343BB5 /* MoviesListViewController.m in Sources */,
 				FC9277BD1C5D171C00F3D640 /* ViewController.m in Sources */,
 				FC9277C31C5D171C00F3D640 /* MoviesGallery.xcdatamodeld in Sources */,
 				FC9277BA1C5D171C00F3D640 /* AppDelegate.m in Sources */,

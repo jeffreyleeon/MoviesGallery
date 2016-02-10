@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1452" y="-724"/>
         </scene>
-        <!--Current / Coming Soon-->
+        <!--Movies-->
         <scene sceneID="ZUS-Ut-Y99">
             <objects>
-                <viewController id="Zmd-kV-wjN" sceneMemberID="viewController">
+                <viewController id="Zmd-kV-wjN" customClass="MoviesListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x6G-Em-5OS"/>
                         <viewControllerLayoutGuide type="bottom" id="agJ-DX-oca"/>
@@ -56,10 +56,42 @@
                     <view key="view" contentMode="scaleToFill" id="wrz-oa-MEq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="44" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-oV-e5F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="78" id="yts-Wl-ICx" customClass="MovieTableViewCell">
+                                        <rect key="frame" x="0.0" y="108" width="414" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yts-Wl-ICx" id="yAw-rY-Dcc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li2-2Q-NYQ">
+                                                    <rect key="frame" x="273" y="21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.4918489493" green="1" blue="0.47901658530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zmd-kV-wjN" id="Rco-SU-zdS"/>
+                                    <outlet property="delegate" destination="Zmd-kV-wjN" id="TUA-s1-kwZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Current / Coming Soon" id="j5m-Vw-CMU"/>
+                    <navigationItem key="navigationItem" title="Movies" id="j5m-Vw-CMU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableView" destination="2qe-oV-e5F" id="823-EM-YGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kft-ca-mxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
