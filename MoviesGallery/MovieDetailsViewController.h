@@ -17,6 +17,7 @@
 @property (assign) MovieStore* movieStore;
 @property (strong) NSArray<NSString*>* trailerIdsArray;
 @property (strong, nonatomic) UIView* playerView;
+@property (assign) float accumulatedHeight;
 
 @property (weak, nonatomic) IBOutlet UIScrollView* scrollView;
 
