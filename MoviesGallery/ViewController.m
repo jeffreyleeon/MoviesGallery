@@ -8,8 +8,10 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
-#import "Models/Movie.h"
+#import "MovieDetailsViewController.h"
 #include "constants.h"
+
+#define GO_TO_DETAILS_SEGUE @"pushFromPopularToDetail"
 
 @interface ViewController ()
 
@@ -41,10 +43,10 @@
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     Movie* movie = [_popularMovies objectAtIndex: index];
-    return [self viewOfSwipeViewForMovie: movie];
+    return [self viewOfSwipeViewForMovie: movie forIndex: index];
 }
 
-- (UIView*)viewOfSwipeViewForMovie:(Movie*) movie {
+- (UIView*)viewOfSwipeViewForMovie:(Movie*)movie forIndex:(NSInteger)index {
     UIView* _view = [[UIView alloc] init];
     [_view setBackgroundColor: [UIColor blackColor]];
     
@@ -76,9 +78,18 @@
     [detailsBtn setBackgroundColor: YELLOW_COLOR];
     [detailsBtn.layer setCornerRadius: 5];
     [detailsBtn setClipsToBounds: YES];
+    [detailsBtn setTag: index];
+    [detailsBtn addTarget: self
+                   action: @selector(goMovieDetails:)
+         forControlEvents: UIControlEventTouchUpInside];
     [_view addSubview: detailsBtn];
     
     return _view;
+}
+
+- (void)goMovieDetails:(UIButton*)button {
+    _selectedMovie = [_popularMovies objectAtIndex: button.tag];
+    [self performSegueWithIdentifier: GO_TO_DETAILS_SEGUE sender: self];
 }
 
 - (CGSize)swipeViewItemSize:(SwipeView *) swipeView {
@@ -108,6 +119,15 @@
         nextPage = 0;
     }
     [_swipeView scrollToPage: nextPage duration: 0.5];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString: GO_TO_DETAILS_SEGUE]) {
+        MovieDetailsViewController* destinationViewController = segue.destinationViewController;
+        [destinationViewController setMovie: _selectedMovie];
+    }
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SwipeView/SwipeView.h>
 #import "Helpers/MovieStore.h"
+#import "Models/Movie.h"
 
 @interface ViewController : UIViewController <
     SwipeViewDataSource,
@@ -16,7 +17,8 @@
 >
 
 @property (assign) MovieStore* movieStore;
-@property (strong) NSArray* popularMovies;
+@property (strong) NSArray<Movie*>* popularMovies;
+@property (assign) Movie* selectedMovie;
 
 @property (strong, nonatomic) IBOutlet SwipeView* swipeView;
 

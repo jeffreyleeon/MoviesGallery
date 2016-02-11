@@ -107,7 +107,6 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     Movie* movie = [self getMovieForIndexPath: indexPath];
     

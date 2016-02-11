@@ -37,11 +37,14 @@
                             <constraint firstItem="t4a-L7-NDC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nqb-Jl-uCJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TOP MOVIES" id="4VV-bj-HSf"/>
+                    <navigationItem key="navigationItem" title="TOP MOVIES" id="4VV-bj-HSf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JlR-Ze-ugT"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="swipeView" destination="t4a-L7-NDC" id="eIE-ed-ll8"/>
+                        <segue destination="NUH-lO-Y05" kind="push" identifier="pushFromPopularToDetail" id="UoG-Yw-QdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,7 +163,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DAP-4J-Nu8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mm9-Za-Fvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-dZ-dgR">
@@ -177,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lln-8x-FVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="-76"/>
+            <point key="canvasLocation" x="1997" y="-302"/>
         </scene>
         <!--Top Movies-->
         <scene sceneID="xl5-IY-Oou">
@@ -260,4 +263,7 @@
         <image name="film-wheel" width="30" height="30"/>
         <image name="top-movies-icon" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UoG-Yw-QdQ"/>
+    </inferredMetricsTieBreakers>
 </document>
