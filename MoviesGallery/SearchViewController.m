@@ -7,7 +7,10 @@
 //
 
 #import "SearchViewController.h"
+#import "MovieDetailsViewController.h"
 #import "MovieTableViewCell.h"
+
+#define GO_TO_DETAILS_SEGUE @"pushFromSearchListToDetail"
 
 @implementation SearchViewController
 
@@ -21,8 +24,15 @@
     _movieStore = [MovieStore sharedInstance];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self searchWithText: searchText];
+    if ([searchText isEqualToString: searchBar.text]) {
+        [self searchWithText: searchText];
+    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -80,6 +90,20 @@
 - (Movie*) getMovieForIndexPath:(NSIndexPath*) indexPath {
     NSInteger row = [indexPath row];
     return _searchedMovies[row];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _selectedMovie = [self getMovieForIndexPath: indexPath];
+    [self performSegueWithIdentifier: GO_TO_DETAILS_SEGUE sender: self];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString: GO_TO_DETAILS_SEGUE]) {
+        MovieDetailsViewController* destinationViewController = segue.destinationViewController;
+        [destinationViewController setMovie: _selectedMovie];
+    }
 }
 
 @end

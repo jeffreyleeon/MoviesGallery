@@ -18,6 +18,7 @@
 @property (strong) NSArray<NSString*>* trailerIdsArray;
 @property (strong, nonatomic) UIView* playerView;
 @property (assign) float accumulatedHeight;
+@property (strong) XCDYouTubeVideoPlayerViewController* videoPlayerViewController;
 
 @property (weak, nonatomic) IBOutlet UIScrollView* scrollView;
 

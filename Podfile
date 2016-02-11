@@ -8,6 +8,7 @@ target 'MoviesGallery' do
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
   pod 'XCDYouTubeKit', '~> 2.5'
+  pod 'Google/Analytics'
 end
 
 target 'MoviesGalleryTests' do
@@ -15,6 +16,7 @@ target 'MoviesGalleryTests' do
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
   pod 'XCDYouTubeKit', '~> 2.5'
+  pod 'Google/Analytics'
 end
 
 target 'MoviesGalleryUITests' do
@@ -22,5 +24,6 @@ target 'MoviesGalleryUITests' do
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
   pod 'XCDYouTubeKit', '~> 2.5'
+  pod 'Google/Analytics'
 end
 

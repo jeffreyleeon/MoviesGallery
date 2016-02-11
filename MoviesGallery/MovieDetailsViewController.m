@@ -33,6 +33,11 @@
     [self fetchTrailers];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [_videoPlayerViewController.moviePlayer stop];
+}
+
 - (void) initScrollView {
     _accumulatedHeight = 0;
     
@@ -60,10 +65,10 @@
         
         _playerView = [[UIView alloc] initWithFrame: playerViewRect];
         NSString* identifier = [_trailerIdsArray objectAtIndex: 0];
-        XCDYouTubeVideoPlayerViewController *videoPlayerViewController =
+        _videoPlayerViewController =
         [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier: identifier];
-        [videoPlayerViewController presentInView: _playerView];
-        [videoPlayerViewController.moviePlayer play];
+        [_videoPlayerViewController presentInView: _playerView];
+        [_videoPlayerViewController.moviePlayer play];
         
         [_scrollView addSubview: _playerView];
     } else {

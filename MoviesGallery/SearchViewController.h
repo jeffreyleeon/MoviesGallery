@@ -14,6 +14,7 @@
 
 @property (strong) NSArray* searchedMovies;
 @property (assign) MovieStore* movieStore;
+@property (assign) Movie* selectedMovie;
 
 @property (weak, nonatomic) IBOutlet UISearchBar* searchBar;
 @property (weak, nonatomic) IBOutlet UITableView* tableView;

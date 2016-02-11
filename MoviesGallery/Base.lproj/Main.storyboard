@@ -278,12 +278,15 @@
                             <constraint firstItem="FfA-Hy-d1I" firstAttribute="trailing" secondItem="R8U-Ok-dRp" secondAttribute="trailing" id="lpn-Kl-cXA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SEARCH" id="ChP-kR-Dxt"/>
+                    <navigationItem key="navigationItem" title="SEARCH" id="ChP-kR-Dxt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="lsI-gm-qfm"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="overlay" destination="4ez-Gj-Suv" id="FkE-tO-p7A"/>
                         <outlet property="searchBar" destination="FfA-Hy-d1I" id="eDk-CY-zpH"/>
                         <outlet property="tableView" destination="R8U-Ok-dRp" id="FUA-BY-grh"/>
+                        <segue destination="NUH-lO-Y05" kind="push" identifier="pushFromSearchListToDetail" id="kXe-sm-B9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2p-uX-kew" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,6 +411,6 @@
         <image name="top-movies-icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uGx-Bg-E1d"/>
+        <segue reference="kXe-sm-B9z"/>
     </inferredMetricsTieBreakers>
 </document>

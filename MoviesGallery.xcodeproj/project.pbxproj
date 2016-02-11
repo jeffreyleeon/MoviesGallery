@@ -27,6 +27,9 @@
 		FC9277C81C5D171C00F3D640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9277C61C5D171C00F3D640 /* LaunchScreen.storyboard */; };
 		FC9277D31C5D171C00F3D640 /* MoviesGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277D21C5D171C00F3D640 /* MoviesGalleryTests.m */; };
 		FC9277DE1C5D171C00F3D640 /* MoviesGalleryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277DD1C5D171C00F3D640 /* MoviesGalleryUITests.m */; };
+		FCB03FB21C6CB26B00FAE0F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB03FB11C6CB26B00FAE0F3 /* GoogleService-Info.plist */; };
+		FCB03FB31C6CB27D00FAE0F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB03FB11C6CB26B00FAE0F3 /* GoogleService-Info.plist */; };
+		FCB03FB41C6CB27F00FAE0F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB03FB11C6CB26B00FAE0F3 /* GoogleService-Info.plist */; };
 		FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCB5B3B81C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCB5B3B91C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
@@ -91,6 +94,7 @@
 		FC9277D91C5D171C00F3D640 /* MoviesGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9277DD1C5D171C00F3D640 /* MoviesGalleryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGalleryUITests.m; sourceTree = "<group>"; };
 		FC9277DF1C5D171C00F3D640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB03FB11C6CB26B00FAE0F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCB5B3B51C5DA7C600342CC7 /* MovieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieStore.h; path = Helpers/MovieStore.h; sourceTree = "<group>"; };
 		FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieStore.m; path = Helpers/MovieStore.m; sourceTree = "<group>"; };
 		FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXCDYouTubeKit.a; path = "Pods/../build/Debug-iphoneos/libXCDYouTubeKit.a"; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		FC9277A91C5D171C00F3D640 = {
 			isa = PBXGroup;
 			children = (
+				FCB03FB11C6CB26B00FAE0F3 /* GoogleService-Info.plist */,
 				FC9277B41C5D171C00F3D640 /* MoviesGallery */,
 				FC9277D11C5D171C00F3D640 /* MoviesGalleryTests */,
 				FC9277DC1C5D171C00F3D640 /* MoviesGalleryUITests */,
@@ -368,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9277C81C5D171C00F3D640 /* LaunchScreen.storyboard in Resources */,
+				FCB03FB21C6CB26B00FAE0F3 /* GoogleService-Info.plist in Resources */,
 				FC9277C51C5D171C00F3D640 /* Assets.xcassets in Resources */,
 				FC9277C01C5D171C00F3D640 /* Main.storyboard in Resources */,
 			);
@@ -377,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB03FB31C6CB27D00FAE0F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB03FB41C6CB27F00FAE0F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,13 +678,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -690,13 +698,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
