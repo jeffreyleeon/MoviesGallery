@@ -6,6 +6,7 @@
 
 #define MOVIE_DB_API_KEY @"327b8d0c66c74e5eab2ebbec7b6ba4ce"
 #define RESULT_KEY @"results"
+#define TRAILER_YOUTUBE_KEY @"youtube"
 
 #pragma mark Singleton Methods
 
@@ -84,14 +85,37 @@
     }];
 }
 
+-(void) fetchTrailerOfMovie:(Movie*)movie withCallback:(void(^)(id))callback {
+    NSDictionary *params = @{
+                             @"id": [NSString stringWithFormat: @"%ld", (long)[movie getMovieId]],
+                             @"language": @"en"
+                             };
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBMovieTrailers parameters:params block:^(id responseObject, NSError *error) {
+        if (!error) {
+            NSArray* youtubeSourceJsonsArray = [responseObject objectForKey: TRAILER_YOUTUBE_KEY];
+            NSMutableArray* youtubeSourceIds = [self adaptYoutubeSource: youtubeSourceJsonsArray];
+            NSLog(@"====%@", youtubeSourceIds);
+            callback(youtubeSourceIds);
+        }
+    }];
+}
+
 - (NSMutableArray*)adaptMovies:(NSArray*) movieJsonsArray {
     NSMutableArray* movieObjectsArray = [[NSMutableArray alloc] init];
     [movieJsonsArray enumerateObjectsUsingBlock:^(id movieJson, NSUInteger idx, BOOL *stop) {
-        NSLog(@"====%@", movieJson);
+        
         Movie* movie = [[Movie alloc] initWithDictionary: movieJson];
         [movieObjectsArray addObject: movie];
     }];
     return movieObjectsArray;
+}
+
+- (NSMutableArray*)adaptYoutubeSource:(NSArray*)youtubeSourceJsonsArray {
+    NSMutableArray* youtubeSourceArray = [[NSMutableArray alloc] init];
+    [youtubeSourceJsonsArray enumerateObjectsUsingBlock:^(id youtubeSourceJson, NSUInteger idx, BOOL *stop) {
+        [youtubeSourceArray addObject: [youtubeSourceJson objectForKey: @"source"]];
+    }];
+    return youtubeSourceArray;
 }
 
 @end

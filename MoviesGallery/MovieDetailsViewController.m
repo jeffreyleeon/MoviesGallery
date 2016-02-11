@@ -19,6 +19,9 @@
     
     [self.navigationController.navigationBar setTintColor: [UIColor whiteColor]];
     [self setTitle: [_movie getTitle]];
+    
+    _movieStore = [MovieStore sharedInstance];
+    [_movieStore fetchTrailerOfMovie: _movie withCallback: ^(id hihi) {}];
 }
 
 - (void)didReceiveMemoryWarning {

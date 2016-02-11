@@ -1,4 +1,5 @@
 #import <foundation/Foundation.h>
+#import "../Models/Movie.h"
 
 @interface MovieStore : NSObject
 
@@ -8,5 +9,6 @@
 -(void) fetchPopularMoviesWithCallback:(void(^)(id))callback;
 -(void) fetchCurrentMoviesWithCallback:(void(^)(id))callback;
 -(void) fetchComingSoonMoviesWithCallback:(void(^)(id))callback;
+-(void) fetchTrailerOfMovie:(Movie*)movie withCallback:(void(^)(id))callback;
 
 @end
