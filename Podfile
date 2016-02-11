@@ -6,15 +6,18 @@
 target 'MoviesGallery' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
+  pod 'AsyncImageView'
 end
 
 target 'MoviesGalleryTests' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
+  pod 'AsyncImageView'
 end
 
 target 'MoviesGalleryUITests' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
+  pod 'AsyncImageView'
 end
 

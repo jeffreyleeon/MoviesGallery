@@ -59,6 +59,14 @@
     return [NSString stringWithFormat: @"%.2f", _voteAverage];
 }
 
+- (NSURL*) getPosterImageURL {
+    NSURL* url = NULL;
+    if (_posterImagePath) {
+        url = [[NSURL alloc] initWithString: _posterImagePath];
+    }
+    return url;
+}
+
 - (NSData*) getPosterImageData {
     NSData* imageData = NULL;
     if (_posterImagePath) {

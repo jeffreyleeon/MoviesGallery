@@ -29,6 +29,7 @@
 - (NSString*) getTitle;
 - (NSString*) getOverview;
 - (NSString*) getVoteAverageString;
+- (NSURL*) getPosterImageURL;
 - (NSData*) getPosterImageData;
 
 @end

@@ -110,9 +110,9 @@
     
     Movie* movie = [self getMovieForIndexPath: indexPath];
     
-    NSData* posterData = [movie getPosterImageData];
-    if ([posterData isKindOfClass: [NSData class]]) {
-        [cell.image setImage: [UIImage imageWithData: posterData]];
+    NSURL* posterURL = [movie getPosterImageURL];
+    if ([posterURL isKindOfClass: [NSURL class]]) {
+        [cell.image setImageURL: posterURL];
     } else {
         [cell.image setImage: [UIImage imageNamed: @"poster-placeholder"]];
     }
