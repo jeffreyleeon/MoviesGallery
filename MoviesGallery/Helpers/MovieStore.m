@@ -51,7 +51,6 @@
     [[ILMovieDBClient sharedClient] GET:kILMovieDBMoviePopular parameters:params block:^(id responseObject, NSError *error) {
         if (!error) {
             NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
-//            NSLog(@"====%@", movieJsonsArray);
             NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
             callback(movies);
         }
@@ -96,6 +95,23 @@
             NSArray* youtubeSourceJsonsArray = [responseObject objectForKey: TRAILER_YOUTUBE_KEY];
             NSMutableArray* youtubeSourceIds = [self adaptYoutubeSource: youtubeSourceJsonsArray];
             callback(youtubeSourceIds);
+        }
+    }];
+}
+
+-(void) searchMovies:(NSString*)keywords withCallback:(void(^)(id))callback {
+    NSDictionary *params = @{
+                             @"query": keywords,
+                             @"language": @"en",
+                             @"include_adult": @"true"
+                             };
+    [[ILMovieDBClient sharedClient] GET:kILMovieDBSearchMovie parameters:params block:^(id responseObject, NSError *error) {
+        if (!error) {
+            NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+            NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
+                        NSLog(@"====%@", movies);
+            
+            callback(movies);
         }
     }];
 }

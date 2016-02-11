@@ -10,5 +10,6 @@
 -(void) fetchCurrentMoviesWithCallback:(void(^)(id))callback;
 -(void) fetchComingSoonMoviesWithCallback:(void(^)(id))callback;
 -(void) fetchTrailerOfMovie:(Movie*)movie withCallback:(void(^)(id))callback;
+-(void) searchMovies:(NSString*)keywords withCallback:(void(^)(id))callback;
 
 @end
