@@ -7,20 +7,20 @@ target 'MoviesGallery' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
-  pod 'youtube-ios-player-helper'
+  pod 'XCDYouTubeKit', '~> 2.5'
 end
 
 target 'MoviesGalleryTests' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
-  pod 'youtube-ios-player-helper'
+  pod 'XCDYouTubeKit', '~> 2.5'
 end
 
 target 'MoviesGalleryUITests' do
   pod 'ILMovieDB'
   pod 'SwipeView', '~> 1.3'
   pod 'AsyncImageView'
-  pod 'youtube-ios-player-helper'
+  pod 'XCDYouTubeKit', '~> 2.5'
 end
 

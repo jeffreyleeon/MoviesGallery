@@ -30,6 +30,7 @@
 		FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCB5B3B81C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCB5B3B91C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
+		FCC8EC3E1C6C7E250060C601 /* libXCDYouTubeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		FC9277DF1C5D171C00F3D640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCB5B3B51C5DA7C600342CC7 /* MovieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieStore.h; path = Helpers/MovieStore.h; sourceTree = "<group>"; };
 		FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieStore.m; path = Helpers/MovieStore.m; sourceTree = "<group>"; };
+		FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXCDYouTubeKit.a; path = "Pods/../build/Debug-iphoneos/libXCDYouTubeKit.a"; sourceTree = "<group>"; };
 		FD609DC328D2981470A2ABF2 /* Pods-MoviesGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesGalleryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesGalleryUITests/Pods-MoviesGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC8EC3E1C6C7E250060C601 /* libXCDYouTubeKit.a in Frameworks */,
 				FC55E00B1C5D1CFD000305CE /* libAFNetworking.a in Frameworks */,
 				FC55E00C1C5D1CFD000305CE /* libILMovieDB.a in Frameworks */,
 				FC55E00D1C5D1CFD000305CE /* libPods-MoviesGallery.a in Frameworks */,
@@ -129,6 +132,7 @@
 		73A87F4A322A826F63A614DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */,
 				FC55E0061C5D1CFD000305CE /* libAFNetworking.a */,
 				FC55E0071C5D1CFD000305CE /* libILMovieDB.a */,
 				FC55E0081C5D1CFD000305CE /* libPods-MoviesGallery.a */,

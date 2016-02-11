@@ -176,6 +176,9 @@
                     <navigationItem key="navigationItem" id="6rK-i9-R9J"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="scrollView" destination="LNF-jX-KFH" id="Vsa-WG-Nrb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lln-8x-FVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

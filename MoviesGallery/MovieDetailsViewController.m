@@ -8,6 +8,8 @@
 
 #import "MovieDetailsViewController.h"
 
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
 @interface MovieDetailsViewController ()
 
 @end
@@ -20,17 +22,36 @@
     [self.navigationController.navigationBar setTintColor: [UIColor whiteColor]];
     [self setTitle: [_movie getTitle]];
     
+    [self initScrollView];
+    
     _movieStore = [MovieStore sharedInstance];
-    [_movieStore fetchTrailerOfMovie: _movie withCallback: ^(id hihi) {}];
+    [self fetchTrailers];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) initScrollView {
+    float accumulatedHeight = 0;
+    if ([_trailerIdsArray count] > 0) {
+        float height = 300;
+        CGRect playerViewRect = CGRectMake(0, accumulatedHeight, SCREEN_WIDTH, height);
+        
+        _playerView = [[UIView alloc] initWithFrame: playerViewRect];
+        NSString* identifier = [_trailerIdsArray objectAtIndex: 0];
+        XCDYouTubeVideoPlayerViewController *videoPlayerViewController =
+            [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier: identifier];
+        [videoPlayerViewController presentInView: _playerView];
+        [videoPlayerViewController.moviePlayer play];
+        
+        [_scrollView addSubview: _playerView];
+        accumulatedHeight += height;
+    }
 }
 
-- (void)setMovie:(Movie*) movie {
-    _movie = movie;
+- (void) fetchTrailers {
+    [_movieStore fetchTrailerOfMovie: _movie withCallback: ^(NSArray* trailerIds) {
+        _trailerIdsArray = [[NSArray alloc] initWithArray: trailerIds copyItems: YES];
+        [self initScrollView];
+    }];
 }
 
 @end

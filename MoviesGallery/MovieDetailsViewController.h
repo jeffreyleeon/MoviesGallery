@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 #import "Models/Movie.h"
 #import "Helpers/MovieStore.h"
 
@@ -14,6 +15,10 @@
 
 @property (assign) Movie* movie;
 @property (assign) MovieStore* movieStore;
+@property (strong) NSArray<NSString*>* trailerIdsArray;
+@property (strong, nonatomic) UIView* playerView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView* scrollView;
 
 - (void)setMovie:(Movie*) movie;
 
