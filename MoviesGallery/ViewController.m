@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <AsyncImageView/AsyncImageView.h>
 #import "ViewController.h"
 #import "MovieDetailsViewController.h"
 #include "constants.h"
@@ -51,9 +52,9 @@
     [_view setBackgroundColor: [UIColor blackColor]];
     
     CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, _swipeView.frame.size.height * 0.6);
-    UIImage* img = [UIImage imageWithData: [movie getPosterImageData]];
-    UIImageView* imageView = [[UIImageView alloc] initWithFrame: imageViewFrame];
-    [imageView setImage: img];
+    NSURL* url = [movie getPosterImageURL];
+    AsyncImageView* imageView = [[AsyncImageView alloc] initWithFrame: imageViewFrame];
+    [imageView setImageURL: url];
     [imageView setContentMode: UIViewContentModeScaleAspectFit];
     [_view addSubview: imageView];
     
