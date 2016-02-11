@@ -157,16 +157,16 @@
         <!--Movie Details View Controller-->
         <scene sceneID="cbs-eu-P98">
             <objects>
-                <viewController id="NUH-lO-Y05" customClass="MovieDetailsViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="NUH-lO-Y05" customClass="MovieDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1GL-cd-GBd"/>
                         <viewControllerLayoutGuide type="bottom" id="DAP-4J-Nu8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mm9-Za-Fvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-dZ-dgR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-dZ-dgR">
                                 <rect key="frame" x="186" y="226" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,8 +174,13 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4yC-dZ-dgR" firstAttribute="centerX" secondItem="Mm9-Za-Fvs" secondAttribute="centerX" id="SEN-YG-MgA"/>
+                            <constraint firstItem="4yC-dZ-dgR" firstAttribute="top" secondItem="1GL-cd-GBd" secondAttribute="bottom" constant="162" id="h3Y-ca-JVT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6rK-i9-R9J"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lln-8x-FVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
