@@ -25,7 +25,12 @@
     [searchBar resignFirstResponder];
     [_movieStore searchMovies: searchBar.text withCallback: ^(NSMutableArray* movies) {
         _searchedMovies = [[NSArray alloc] initWithArray: movies];
-        [_tableView reloadData];
+        if ([_searchedMovies count]) {
+            [_overlay setHidden: TRUE];
+            [_tableView reloadData];
+        } else {
+            [_overlay setHidden: FALSE];
+        }
     }];
 }
 
