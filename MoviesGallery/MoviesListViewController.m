@@ -110,6 +110,7 @@
     
     Movie* movie = [self getMovieForIndexPath: indexPath];
     
+    cell.image.image = nil;
     NSURL* posterURL = [movie getPosterImageURL];
     if ([posterURL isKindOfClass: [NSURL class]]) {
         [cell.image setImageURL: posterURL];

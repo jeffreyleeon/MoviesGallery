@@ -73,7 +73,12 @@
         
         AsyncImageView* imageView = [[AsyncImageView alloc] initWithFrame: imageViewRect];
         [imageView setBackgroundColor: [UIColor blackColor]];
-        [imageView setImageURL: [_movie getPosterImageURL]];
+        NSURL* posterURL = [_movie getPosterImageURL];
+        if ([posterURL isKindOfClass: [NSURL class]]) {
+            [imageView setImageURL: posterURL];
+        } else {
+            [imageView setImage: [UIImage imageNamed: @"poster-placeholder"]];
+        }
         [imageView setContentMode: UIViewContentModeScaleAspectFit];
         
         [_scrollView addSubview: imageView];
