@@ -51,6 +51,7 @@
     [[ILMovieDBClient sharedClient] GET:kILMovieDBMoviePopular parameters:params block:^(id responseObject, NSError *error) {
         if (!error) {
             NSArray* movieJsonsArray = [responseObject objectForKey: RESULT_KEY];
+//            NSLog(@"====%@", movieJsonsArray);
             NSMutableArray* movies = [self adaptMovies: movieJsonsArray];
             callback(movies);
         }
@@ -94,7 +95,6 @@
         if (!error) {
             NSArray* youtubeSourceJsonsArray = [responseObject objectForKey: TRAILER_YOUTUBE_KEY];
             NSMutableArray* youtubeSourceIds = [self adaptYoutubeSource: youtubeSourceJsonsArray];
-            NSLog(@"====%@", youtubeSourceIds);
             callback(youtubeSourceIds);
         }
     }];

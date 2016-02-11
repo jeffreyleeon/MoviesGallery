@@ -166,12 +166,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNF-jX-KFH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNF-jX-KFH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LNF-jX-KFH" firstAttribute="leading" secondItem="Mm9-Za-Fvs" secondAttribute="leading" id="9Pc-5c-pdA"/>
+                            <constraint firstItem="LNF-jX-KFH" firstAttribute="bottom" secondItem="DAP-4J-Nu8" secondAttribute="top" id="UJu-3I-pCv"/>
+                            <constraint firstItem="LNF-jX-KFH" firstAttribute="top" secondItem="Mm9-Za-Fvs" secondAttribute="top" id="rPp-fB-vIF"/>
+                            <constraint firstAttribute="trailing" secondItem="LNF-jX-KFH" secondAttribute="trailing" id="tsh-DM-bOa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6rK-i9-R9J"/>
                     <nil key="simulatedBottomBarMetrics"/>

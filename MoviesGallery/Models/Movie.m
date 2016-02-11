@@ -18,6 +18,7 @@
 #define OVERVIEW_KEY @"overview"
 #define POSTER_PATH_KEY @"poster_path"
 #define LANGUAGE_KEY @"original_language"
+#define RELEASE_DATE_KEY @"release_date"
 
 #define IMAGE_BASE_PATH @"https://image.tmdb.org/t/p/w185"
 
@@ -39,6 +40,7 @@
             _posterImagePath = [IMAGE_BASE_PATH stringByAppendingString: [dictionary objectForKey: POSTER_PATH_KEY]];
         }
         _language = [dictionary objectForKey: LANGUAGE_KEY];
+        _releaseDate = [dictionary objectForKey: RELEASE_DATE_KEY];
     }
     return self;
 }
@@ -74,6 +76,10 @@
         imageData = [NSData dataWithContentsOfURL: url];
     }
     return imageData;
+}
+
+- (NSString*) getReleaseDate {
+    return _releaseDate;
 }
 
 @end

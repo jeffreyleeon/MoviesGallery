@@ -21,7 +21,7 @@
 @property (readonly) NSString* overview;
 @property (readonly) NSString* posterImagePath;
 @property (readonly) NSString* language;
-//@property (readonly) NSDate* releaseDate;
+@property (readonly) NSString* releaseDate;
 //@property (readonly) NSArray* genreIds;
 
 - (id)initWithDictionary:(NSDictionary *) dictionary;
@@ -31,5 +31,6 @@
 - (NSString*) getVoteAverageString;
 - (NSURL*) getPosterImageURL;
 - (NSData*) getPosterImageData;
+- (NSString*) getReleaseDate;
 
 @end
