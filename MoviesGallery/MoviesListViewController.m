@@ -8,7 +8,9 @@
 
 #import "MoviesListViewController.h"
 #import "MovieTableViewCell.h"
-#import "Models/Movie.h"
+#import "MovieDetailsViewController.h"
+
+#define GO_TO_DETAILS_SEGUE @"pushFromMoviesListToDetail"
 
 @interface MoviesListViewController ()
 
@@ -134,14 +136,18 @@
     return ret;
 }
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _selectedMovie = [self getMovieForIndexPath: indexPath];
+    [self performSegueWithIdentifier: GO_TO_DETAILS_SEGUE sender: self];
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString: GO_TO_DETAILS_SEGUE]) {
+        MovieDetailsViewController* destinationViewController = segue.destinationViewController;
+        [destinationViewController setMovie: _selectedMovie];
+    }
 }
-*/
 
 @end

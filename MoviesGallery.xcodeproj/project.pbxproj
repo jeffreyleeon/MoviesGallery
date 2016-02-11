@@ -17,6 +17,7 @@
 		FC848BDB1C6B860800343BB5 /* MoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */; };
 		FC848BDE1C6B8AC700343BB5 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */; };
 		FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FC880F7D1C5E1C8D00E48704 /* Movie.m */; };
+		FC8D90A91C6C36F300657F11 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8D90A81C6C36F300657F11 /* MovieDetailsViewController.m */; };
 		FC9277B71C5D171C00F3D640 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B61C5D171C00F3D640 /* main.m */; };
 		FC9277BA1C5D171C00F3D640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277B91C5D171C00F3D640 /* AppDelegate.m */; };
 		FC9277BD1C5D171C00F3D640 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9277BC1C5D171C00F3D640 /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		FC880F7C1C5E1C8D00E48704 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Models/Movie.h; sourceTree = "<group>"; };
 		FC880F7D1C5E1C8D00E48704 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Models/Movie.m; sourceTree = "<group>"; };
+		FC8D90A71C6C36F300657F11 /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		FC8D90A81C6C36F300657F11 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
 		FC9277B21C5D171C00F3D640 /* MoviesGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9277B61C5D171C00F3D640 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC9277B81C5D171C00F3D640 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				FC9277B91C5D171C00F3D640 /* AppDelegate.m */,
 				FC9277BB1C5D171C00F3D640 /* ViewController.h */,
 				FC9277BC1C5D171C00F3D640 /* ViewController.m */,
+				FC8D90A71C6C36F300657F11 /* MovieDetailsViewController.h */,
+				FC8D90A81C6C36F300657F11 /* MovieDetailsViewController.m */,
 				FC848BD91C6B860800343BB5 /* MoviesListViewController.h */,
 				FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */,
 				FC848BDC1C6B8AC700343BB5 /* MovieTableViewCell.h */,
@@ -502,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */,
+				FC8D90A91C6C36F300657F11 /* MovieDetailsViewController.m in Sources */,
 				FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC848BDE1C6B8AC700343BB5 /* MovieTableViewCell.m in Sources */,
 				FC848BDB1C6B860800343BB5 /* MoviesListViewController.m in Sources */,

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Helpers/MovieStore.h"
+#import "Models/Movie.h"
 
 @interface MoviesListViewController : UIViewController
 
 @property (assign) MovieStore* movieStore;
+@property (assign) Movie* selectedMovie;
 @property (strong) NSArray* currentMovies;
 @property (strong) NSArray* comingSoonMovies;
 
