@@ -46,20 +46,21 @@
     UIView* _view = [[UIView alloc] init];
     [_view setBackgroundColor: [UIColor blackColor]];
     
-    CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, 400);
+    CGRect imageViewFrame = CGRectMake(0, 0, _swipeView.frame.size.width, _swipeView.frame.size.height * 0.6);
     UIImage* img = [UIImage imageWithData: [movie getPosterImageData]];
     UIImageView* imageView = [[UIImageView alloc] initWithFrame: imageViewFrame];
     [imageView setImage: img];
     [imageView setContentMode: UIViewContentModeScaleAspectFit];
     [_view addSubview: imageView];
     
+    float topMargin = 80;
     float margin = 40;
-    CGRect overviewLabelFrame = CGRectMake(margin, imageViewFrame.size.height - margin,
+    CGRect overviewLabelFrame = CGRectMake(margin, imageViewFrame.size.height - topMargin,
                                         _swipeView.frame.size.width - 2 * margin, 300);
     UILabel* overviewLabel = [[UILabel alloc] initWithFrame: overviewLabelFrame];
     [overviewLabel setTextAlignment: NSTextAlignmentCenter];
     [overviewLabel setTextColor: [UIColor whiteColor]];
-    [overviewLabel setNumberOfLines: 4];
+    [overviewLabel setNumberOfLines: 5];
     [overviewLabel setClipsToBounds: YES];
     [overviewLabel setFont: [UIFont systemFontOfSize: 17]];
     [overviewLabel setText: [movie getOverview]];
@@ -80,7 +81,7 @@
 }
 
 - (void) scheduleAutoScrolling {
-    [NSTimer scheduledTimerWithTimeInterval: 10.0
+    [NSTimer scheduledTimerWithTimeInterval: 30.0
                                      target: self
                                    selector: @selector(nextPopularMovie)
                                    userInfo: NULL

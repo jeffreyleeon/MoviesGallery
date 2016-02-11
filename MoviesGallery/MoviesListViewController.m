@@ -8,6 +8,7 @@
 
 #import "MoviesListViewController.h"
 #import "MovieTableViewCell.h"
+#import "Models/Movie.h"
 
 @interface MoviesListViewController ()
 
@@ -61,8 +62,8 @@
     UILabel* label = [[UILabel alloc] initWithFrame: labelFrame];
     [label setFont:[UIFont boldSystemFontOfSize: 20]];
     NSString* string = [self sectionHeaderTitleForSection: section];
-    [label setText:string];
-    [view addSubview:label];
+    [label setText: string];
+    [view addSubview: label];
     [view setBackgroundColor:[UIColor whiteColor]];
     return view;
 }
@@ -97,10 +98,40 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
+    Movie* movie = [self getMovieForIndexPath: indexPath];
     
-    [cell.popularity setText: @"★"];
+    NSData* posterData = [movie getPosterImageData];
+    if ([posterData isKindOfClass: [NSData class]]) {
+        [cell.image setImage: [UIImage imageWithData: posterData]];
+    } else {
+        [cell.image setImage: [UIImage imageNamed: @"poster-placeholder"]];
+    }
+    [cell.image setContentMode: UIViewContentModeScaleAspectFit];
+    
+    NSString* title = [movie getTitle];
+    [cell.title setText: title];
+    
+    NSString* popularity = [movie getVoteAverageString];
+    [cell.popularity setText: [popularity stringByAppendingString: @" ★"]];
     
     return cell;
+}
+
+- (Movie*) getMovieForIndexPath:(NSIndexPath*) indexPath {
+    NSInteger section = [indexPath section];
+    NSInteger row = [indexPath row];
+    NSArray<Movie*>* array = [self getTargetMoviesArrayForSection: section];
+    return array[row];
+}
+
+- (NSArray*) getTargetMoviesArrayForSection:(NSInteger) section {
+    NSArray* ret;
+    if (section == 0) {
+        ret = _currentMovies;
+    } else if (section == 1) {
+        ret = _comingSoonMovies;
+    }
+    return ret;
 }
 
 /*

@@ -28,6 +28,7 @@
 - (NSInteger) getMovieId;
 - (NSString*) getTitle;
 - (NSString*) getOverview;
+- (NSString*) getVoteAverageString;
 - (NSData*) getPosterImageData;
 
 @end
