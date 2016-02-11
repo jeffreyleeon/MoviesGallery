@@ -6,8 +6,10 @@
 //  Copyright © 2016 jeffreyleeon. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
 #import "Models/Movie.h"
+#include "constants.h"
 
 @interface ViewController ()
 
@@ -65,6 +67,16 @@
     [overviewLabel setFont: [UIFont systemFontOfSize: 17]];
     [overviewLabel setText: [movie getOverview]];
     [_view addSubview: overviewLabel];
+    
+    CGRect detailsButtonFrame = CGRectMake(margin, imageViewFrame.size.height + 140,
+                                           _swipeView.frame.size.width - 2 * margin, 40);
+    UIButton* detailsBtn = [[UIButton alloc] initWithFrame: detailsButtonFrame];
+    [detailsBtn setTitle: @"More Details" forState: UIControlStateNormal];
+    [detailsBtn setTitleColor: [UIColor whiteColor] forState: UIControlStateNormal];
+    [detailsBtn setBackgroundColor: YELLOW_COLOR];
+    [detailsBtn.layer setCornerRadius: 5];
+    [detailsBtn setClipsToBounds: YES];
+    [_view addSubview: detailsBtn];
     
     return _view;
 }

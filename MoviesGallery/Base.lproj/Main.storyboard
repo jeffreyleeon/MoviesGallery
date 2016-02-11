@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="1452" y="-724"/>
         </scene>
-        <!--Movies-->
+        <!--MOVIES-->
         <scene sceneID="ZUS-Ut-Y99">
             <objects>
                 <viewController id="Zmd-kV-wjN" customClass="MoviesListViewController" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljT-u7-aTX">
                                                     <rect key="frame" x="198" y="68" width="191" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.70196078431372544" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="li2-2Q-NYQ">
@@ -138,7 +138,7 @@
                             <constraint firstItem="2qe-oV-e5F" firstAttribute="leading" secondItem="wrz-oa-MEq" secondAttribute="leading" id="gQS-ea-9Fc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="j5m-Vw-CMU">
+                    <navigationItem key="navigationItem" title="MOVIES" id="j5m-Vw-CMU">
                         <barButtonItem key="backBarButtonItem" title=" " id="b0f-3W-MFe"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -215,6 +215,11 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.70196078431372544" green="0.56066009963768115" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="eOj-wS-ljR" kind="relationship" relationship="viewControllers" id="YdM-N7-lpQ"/>

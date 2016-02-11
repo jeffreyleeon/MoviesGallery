@@ -9,6 +9,7 @@
 #import "MoviesListViewController.h"
 #import "MovieTableViewCell.h"
 #import "MovieDetailsViewController.h"
+#include "constants.h"
 
 #define GO_TO_DETAILS_SEGUE @"pushFromMoviesListToDetail"
 
@@ -28,6 +29,11 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,10 +69,11 @@
                                    width, height);
     UILabel* label = [[UILabel alloc] initWithFrame: labelFrame];
     [label setFont:[UIFont boldSystemFontOfSize: 20]];
+    [label setTextColor: [UIColor whiteColor]];
     NSString* string = [self sectionHeaderTitleForSection: section];
     [label setText: string];
     [view addSubview: label];
-    [view setBackgroundColor:[UIColor whiteColor]];
+    [view setBackgroundColor: YELLOW_COLOR];
     return view;
 }
 
@@ -100,6 +107,8 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     Movie* movie = [self getMovieForIndexPath: indexPath];
     
     NSData* posterData = [movie getPosterImageData];
