@@ -21,9 +21,17 @@
     _movieStore = [MovieStore sharedInstance];
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self searchWithText: searchText];
+}
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    [_movieStore searchMovies: searchBar.text withCallback: ^(NSMutableArray* movies) {
+    [self searchWithText: searchBar.text];
+}
+
+- (void) searchWithText:(NSString*)searchText {
+    [_movieStore searchMovies: searchText withCallback: ^(NSMutableArray* movies) {
         _searchedMovies = [[NSArray alloc] initWithArray: movies];
         if ([_searchedMovies count]) {
             [_overlay setHidden: TRUE];
