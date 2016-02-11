@@ -31,7 +31,6 @@
     
     _movieStore = [MovieStore sharedInstance];
     [self fetchTrailers];
-    
 }
 
 - (void) initScrollView {

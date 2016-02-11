@@ -12,6 +12,7 @@
 #include "constants.h"
 
 #define GO_TO_DETAILS_SEGUE @"pushFromMoviesListToDetail"
+#define GO_TO_SEARCH_SEGUE @"pushFromMoviesListToSearch"
 
 @interface MoviesListViewController ()
 
@@ -22,6 +23,8 @@
 - (void)viewDidLoad {
     [_tableView setBackgroundColor: [UIColor blackColor]];
     [_tableView setBounces: FALSE];
+    
+    [self addSearchButton];
     
     _movieStore = [MovieStore sharedInstance];
     [self fetchCurrentMovies];
@@ -36,9 +39,17 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) addSearchButton {
+    UIBarButtonItem* searchButton = [[UIBarButtonItem alloc]
+                                     initWithBarButtonSystemItem: UIBarButtonSystemItemSearch
+                                                          target: self
+                                                          action: @selector(gotoSearch:)];
+    [searchButton setTintColor: [UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = searchButton;
+}
+
+- (IBAction)gotoSearch:(id)sender {
+    [self performSegueWithIdentifier: GO_TO_SEARCH_SEGUE sender: self];
 }
 
 - (void) fetchCurrentMovies {

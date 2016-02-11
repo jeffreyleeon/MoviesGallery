@@ -31,6 +31,7 @@
 		FCB5B3B81C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCB5B3B91C5DA7C600342CC7 /* MovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */; };
 		FCC8EC3E1C6C7E250060C601 /* libXCDYouTubeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */; };
+		FCC8EC411C6C99160060C601 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC8EC401C6C99160060C601 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		FCB5B3B51C5DA7C600342CC7 /* MovieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieStore.h; path = Helpers/MovieStore.h; sourceTree = "<group>"; };
 		FCB5B3B61C5DA7C600342CC7 /* MovieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieStore.m; path = Helpers/MovieStore.m; sourceTree = "<group>"; };
 		FCC8EC3D1C6C7E250060C601 /* libXCDYouTubeKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXCDYouTubeKit.a; path = "Pods/../build/Debug-iphoneos/libXCDYouTubeKit.a"; sourceTree = "<group>"; };
+		FCC8EC3F1C6C99160060C601 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FCC8EC401C6C99160060C601 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		FD609DC328D2981470A2ABF2 /* Pods-MoviesGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesGalleryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesGalleryUITests/Pods-MoviesGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +207,8 @@
 				FC848BDA1C6B860800343BB5 /* MoviesListViewController.m */,
 				FC848BDC1C6B8AC700343BB5 /* MovieTableViewCell.h */,
 				FC848BDD1C6B8AC700343BB5 /* MovieTableViewCell.m */,
+				FCC8EC3F1C6C99160060C601 /* SearchViewController.h */,
+				FCC8EC401C6C99160060C601 /* SearchViewController.m */,
 				FC9277BE1C5D171C00F3D640 /* Main.storyboard */,
 				FC9277C41C5D171C00F3D640 /* Assets.xcassets */,
 				FC9277C61C5D171C00F3D640 /* LaunchScreen.storyboard */,
@@ -325,7 +330,7 @@
 				TargetAttributes = {
 					FC9277B11C5D171C00F3D640 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = E73MP5SE23;
+						DevelopmentTeam = D42UJTVA4N;
 					};
 					FC9277CD1C5D171C00F3D640 = {
 						CreatedOnToolsVersion = 7.2;
@@ -514,6 +519,7 @@
 			files = (
 				FC880F7E1C5E1C8D00E48704 /* Movie.m in Sources */,
 				FC8D90A91C6C36F300657F11 /* MovieDetailsViewController.m in Sources */,
+				FCC8EC411C6C99160060C601 /* SearchViewController.m in Sources */,
 				FCB5B3B71C5DA7C600342CC7 /* MovieStore.m in Sources */,
 				FC848BDE1C6B8AC700343BB5 /* MovieTableViewCell.m in Sources */,
 				FC848BDB1C6B860800343BB5 /* MoviesListViewController.m in Sources */,
@@ -671,7 +677,7 @@
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.MoviesGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -691,7 +697,7 @@
 				INFOPLIST_FILE = MoviesGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Debug-iphoneos";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.MoviesGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyleeon.movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
